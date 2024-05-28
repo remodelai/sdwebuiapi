@@ -110,6 +110,7 @@ class ControlNetUnit:
 
     def to_dict(self):
         return {
+            "enable": True,
             "input_image": raw_b64_img(self.input_image) if self.input_image else "",
             "mask": raw_b64_img(self.mask) if self.mask is not None else None,
             "module": self.module,
